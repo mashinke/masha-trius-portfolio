@@ -4,19 +4,15 @@
   box-sizing: border-box;
 }
 :root {
-  font-family: Montserrat;
-  background: var(--verydark);
   --verylight: #fdfdfd;
   --light: #efefef;
   --medium: #bbbbbb;
   --dark: #656565;
   --verydark: #000000;
   --translucentdark: #000000d0;
-  --address-bar-height: calc(100vh - 100%);
-  height: calc(100vh - var(--address-bar-height));
-}
-
-body {
+  font-family: Montserrat;
+  background: var(--verydark);
+  color: var(--verylight);
   height: 100%;
 }
 
@@ -24,40 +20,28 @@ a {
   color: var(--verylight);
 }
 
-.masthead {
+body {
+  height: 100%
+}
+
+.masthead-container {
   position: relative;
   height: calc(100% - 2rem);
 }
 
- .masthead:before {
-   background: linear-gradient(to
-   bottom, var(--verydark) 0%, var(--translucentdark) 30%, transparent 100%),
-
-   url(./hero.jpg)
-   no-repeat bottom;
-   background-size: cover;
-   content: "";
-   position: absolute;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-   z-index: -1;
- }
-
-.invitation-1 {
-  animation: fade-in 1.6s ease-out both;
-  animation-delay: 1.8s;
-}
-
-.invitation-2 {
-  animation: fade-in 1.6s ease-out both;
-  animation-delay: 2.1s;
-}
-
-.invitation-3 {
-  animation: fade-in 1.6s ease-out both;
-  animation-delay: 2.4s;
+.masthead {
+  height: calc(100vh - calc(100vh - 100%));
+  background: linear-gradient(
+    to bottom, 
+  var(--verydark) 0%, 
+  var(--translucentdark) 30%, 
+  transparent 100%),
+  url(./hero.jpg)
+  no-repeat 
+  bottom;
+  background-attachment: scroll;
+  background-size: cover;
+  z-index: -1;
 }
 
 .name-title-container {
@@ -94,7 +78,19 @@ a {
   animation-fill-mode: both;
 }
 
+.content {
+  height: calc(100vh * 2);
+  position: sticky;
+  bottom: -100vh ;
+  z-index: -1;
+}
+
+
+
 .invitation {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: block;
   text-align: right;
   margin: 0;
@@ -107,8 +103,19 @@ a {
   font-size: 1.5rem;
 }
 
-.address-bar-compensator {
-  height: var(--address-bar-height);
+.invitation-1 {
+  animation: fade-in 1.6s ease-out both;
+  animation-delay: 1.8s;
+}
+
+.invitation-2 {
+  animation: fade-in 1.6s ease-out both;
+  animation-delay: 2.1s;
+}
+
+.invitation-3 {
+  animation: fade-in 1.6s ease-out both;
+  animation-delay: 2.4s;
 }
 
 @media screen and (min-width: 36rem) {
@@ -150,18 +157,5 @@ a {
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes slide-in {
-  0% {
-    opacity: 0;
-    transform-origin: top right;
-    transform: scaleX(0);
-  }
-  100% {
-    opacity: 1;
-    transform-origin: top right;
-    transform: none;
   }
 }
