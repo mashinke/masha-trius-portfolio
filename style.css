@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Proza+Libre:wght@400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  font-family: Montserrat;
+  background: var(--verydark);
+  --verylight: #fdfdfd;
+  --light: #efefef;
+  --medium: #bbbbbb;
+  --dark: #656565;
+  --verydark: #000000;
+  --translucentdark: #000000d0;
+  height: calc(100vh - calc(100vh - 100%));
+
+}
+body {
+  height: 100%;
+}
+
+a {
+  color: var(--verylight);
+}
+
+.masthead {
+  position: relative;
+  height: calc(100% - 2rem);
+  background-image: url(./hero.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: .75rem solid var(--verydark);
+}
+
+.headline {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: min-content;
+  margin: 0;
+  padding: .5rem 1rem;
+  background-color: var(--translucentdark);
+  color: var(--verylight);
+  font-family: "Proza Libre";
+  line-height: 4rem;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 1rem 2rem 0 2rem;
+  height: 2.875rem;
+  background-color: var(--translucentdark);
+  color: var(--verylight);
+  font-family: "Proza Libre";
+  line-height: 2.5rem;
+  font-size: 1.75rem;
+  z-index: 1;
+}
+
+.title {
+  position: absolute;
+  top: 2.875rem;
+  margin: 0;
+  padding: .25rem 1.5rem 1rem 2rem;
+  height: 4.5rem;
+  background-color: var(--translucentdark);
+  color: var(--verylight);
+  font-family: "Proza Libre";
+  line-height: 4rem;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 48rem) {
+  :root{
+    font-size: 1.5rem;
+  }
+
+  .headline {
+    width: fit-content;
+  }
+
+  .name {
+    top: calc(50vh - 2.875rem);
+  }
+
+  .title {
+    top: 50vh;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  :root {
+    font-size: 2rem;
+  }
+}
+
+.invitation {
+  display: block;
+  margin: 0;
+  padding: 0 0 0 1rem;
+  height: 2rem;
+  overflow: hidden;
+  background-color: var(--verydark);
+  color: var(--verylight);
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
