@@ -10,9 +10,11 @@
   --dark: #656565;
   --verydark: #000000;
   --translucentdark: #000000d0;
-  font-family: Montserrat;
-  background: var(--verydark);
-  color: var(--verylight);
+  --heading-font: "Proza Libre";
+  --body-font: "Montserrat"
+  font-family: var(--body-font);
+  background: var(--light);
+  color: var(--verydark);
   height: 100%;
 }
 
@@ -59,7 +61,7 @@ body {
   padding: 1rem 2rem 0 2rem;
   height: 2.875rem;
   color: var(--verylight);
-  font-family: "Proza Libre";
+  font-family: var(--heading-font);
   line-height: 2.5rem;
   font-size: 1.75rem;
   z-index: 1;
@@ -72,7 +74,7 @@ body {
   padding: 0 1.5rem 1rem 2rem;
   height: 3.5rem;
   color: var(--verylight);
-  font-family: "Proza Libre";
+  font-family: var(--heading-font);
   line-height: 3rem;
   font-size: 2rem;
   animation: pop-in 0.6s ease-out forwards;
@@ -81,13 +83,43 @@ body {
 }
 
 .content {
-  height: calc(100vh * 2);
   position: sticky;
+  height: 200vh;
   bottom: -100vh ;
   z-index: -1;
+  width: 100%;
+  /* padding: 2rem 0 100vh 0; */
+  /* margin-top: 2rem; */
+  display: flex;
+  flex-direction: column;
 }
 
+.section-heading {
+  text-align: center;
+  margin: 9vh 0;
+  font-family: var(--heading-font);
+}
 
+.intro {
+  background-color: var(--medium);
+}
+
+.intro p {
+  max-width: 30rem;
+  margin: 2rem auto;
+}
+
+.intro blockquote {
+  margin: 2rem auto;
+  max-width: 15rem;
+}
+
+.photo {
+  margin: 9vh auto;
+  /* width: 30vw;
+  height: 45vw; */
+  /* border: 1px solid var(--dark); */
+}
 
 .invitation {
   position: fixed;
