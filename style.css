@@ -111,41 +111,70 @@ body {
 
 .content {
   position: sticky;
-  height: 200vh;
   bottom: -100vh ;
   z-index: -2;
   width: 100%;
-  /* padding: 2rem 0 100vh 0; */
-  /* margin-top: 2rem; */
+  padding: 0 0 2rem 0;
   display: flex;
   flex-direction: column;
 }
 
-.section-heading {
+.content-article {
+  margin: 0 0 2rem 0;
+}
+
+.content-header, .content-section {
+  min-height: calc(100vh - 2rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.content-header {
+  justify-content: center;
+}
+
+.content-section {
+  justify-content: space-evenly;
+  padding: 10vh 0;
+}
+
+.content-heading, .content-subheading {
   text-align: center;
-  margin: 9vh 0;
   font-family: var(--heading-font);
+  margin: 0 auto;
+}
+
+.content-heading {
+  width: 90%;
+}
+
+.content-subheading {
+  font-style: italic;
+  margin: 0 auto;
+  max-width: 30rem;
+  width: 80%;
 }
 
 .intro {
   background-color: var(--medium);
 }
 
-.intro p {
+.content-section p {
   max-width: 30rem;
-  margin: 2rem auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .intro blockquote {
-  margin: 2rem auto;
+  margin: 0 auto;
   max-width: 15rem;
 }
 
 .photo {
   margin: 9vh auto;
-  /* width: 30vw;
-  height: 45vw; */
-  /* border: 1px solid var(--dark); */
+  width: 20vh;
+  height: 30vh;
+  border: 1px solid var(--dark);
 }
 
 .invitation {
@@ -192,6 +221,14 @@ body {
   
   .masthead-container {
     height: calc(100vh - 1.5rem);
+  }
+
+  .content {
+    padding-bottom: 1.5rem;
+  }
+
+  .content-header {
+    height: calc(100vh - 2rem);
   }
 
   .invitation {
