@@ -33,9 +33,10 @@ body {
 
 .masthead {
   height: calc(100vh - calc(100vh - 100%));
+  background-image: url(./hero.jpg);
   /* z-index: 1; */
 }
-.masthead:before, .masthead:after {
+.masthead, .masthead:before, .masthead:after {
   background-attachment: scroll;
   background-size: cover;
   position: absolute;
@@ -47,24 +48,20 @@ body {
   z-index: -1;
 }
 
-.masthead:before {
-  background-image: url(./hero.jpg);
-}
-
 .masthead:after {
   background: linear-gradient(
     to bottom, 
   var(--verydark) 0%, 
-  var(--translucentdark) 30%, 
-  transparent 100%),
+  var(--translucentdark) 20%, 
+  transparent 50%),
   no-repeat 
   bottom;
-  background-size: 200% 200%;
-  animation-name: oscillate-background;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: alternate;
+  animation: 
+    oscillate-background 
+    6s 
+    ease-in-out
+    0s infinite
+    alternate;
 }
 
 @keyframes oscillate-background {
