@@ -100,15 +100,15 @@ body {
 }
 
 .invite-1 {
-  animation-delay: 2.6s;
+  animation-delay: 2.4s;
 }
 
 .invite-2 {
-  animation-delay: 2.9s;
+  animation-delay: 2.7s;
 }
 
 .invite-3 {
-  animation-delay: 3.2s;
+  animation-delay: 3.0s;
 }
 
 .content {
@@ -212,6 +212,8 @@ p.skill-icon-caption {
 
 .project-item {
   padding: 10vh 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-item:nth-child(even) {
@@ -235,7 +237,6 @@ p.skill-icon-caption {
 
 .project-title {
   margin: 0 0 .5rem 0;
-  text-align: center;
 }
 
 .project-screenshot {
@@ -252,6 +253,7 @@ p.skill-icon-caption {
 
 .project-description p {
   margin-top: 1rem;
+  width: 100%;
 }
 
 .project-description p:last-child {
@@ -272,6 +274,10 @@ p.skill-icon-caption {
   font-weight: bold;
   color: var(--verylight);
   text-decoration: none;
+}
+
+.project-link:hover {
+  background-color: var(--verydark);
 }
 
 .project-link i {
@@ -309,6 +315,9 @@ p.skill-icon-caption {
   :root {
     font-size: 1.5rem;
   }
+  .content-section > p, .content-section blockquote {
+    line-height: 1.75;
+  }
 
   .project-description p {
     font-size: .75rem;
@@ -331,6 +340,49 @@ p.skill-icon-caption {
 
   .project-screenshot {
     margin-top: -1rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .project-header, .project-description {
+    margin-bottom: 0;
+  }
+
+  .project-list {
+    margin: 2.5vh auto 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .project-item {
+    justify-content: space-between;
+  }
+
+  .project-title {
+    flex-grow: 0;
+  }
+
+  .project-item, .project-item:last-child {
+    padding: 2.5vh 0 5vh 0;
+  }
+
+  .project-header, .project-screenshot, .project-description, .project-links {
+    width: 30vw;
+    padding: 0 1rem;
+  }
+
+  .project-header {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 7rem;
+  }
+
+  .project-screenshot {
+    height: 16.875vw;
+  }
+
+  .project-description {
+    flex-grow: 2;
   }
 }
 
