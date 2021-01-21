@@ -33,7 +33,7 @@ body {
 
 .masthead {
   height: calc(100vh - calc(100vh - 100%));
-  background-image: url(./hero.jpg);
+  background-image: url(assets/hero.jpg);
   /* z-index: 1; */
 }
 .masthead, .masthead:before, .masthead:after {
