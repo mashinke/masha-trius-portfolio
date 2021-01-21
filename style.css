@@ -10,12 +10,14 @@
   --dark: #656565;
   --verydark: #000000;
   --translucentdark: #000000d0;
+  --translucentverydark: #000000f0;
   --heading-font: "Proza Libre";
   --body-font: "Montserrat"
   font-family: var(--body-font);
   background: var(--verylight);
   color: var(--verydark);
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -30,6 +32,7 @@ body {
   position: relative;
   height: 100%;
   z-index: 2;
+  overflow-x: hidden;
 }
 
 .masthead {
@@ -71,7 +74,7 @@ body {
   top: calc(50vh - 7.5rem);
   background-color: var(--translucentdark);
   color: var(--verylight);
-  animation: slide-in .6s ease-out forwards;
+  animation: left-slide .6s ease-out forwards;
 }
 .intro-container, .invite-container {
   margin: 0;
@@ -111,9 +114,70 @@ body {
   animation-delay: 3.0s;
 }
 
+.navigation {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  animation: right-slide .6s ease-in 3.3s both;
+  background: var(--translucentverydark);
+  margin: 0;
+  padding: .5rem 1rem .5rem;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.nav-item {
+  animation: right-slide .3s ease-out both;
+  color: var(--light);
+  margin: .25rem .125rem .25rem auto;
+  padding: .125rem .25rem .25rem .5rem;
+  text-align: right;
+}
+
+.nav-item:last-child {
+  margin-bottom: 0;
+}
+
+.nav-item:before {
+  content: '» ';
+  color: var(--light);
+}
+
+.nav-item a {
+  text-decoration: none;
+}
+
+
+.nav-item:hover {
+  text-decoration: underline;
+}
+
+.nav-item-2 {
+  animation-delay: 3.9s;
+}
+
+.nav-item-3 {
+  animation-delay: 4.05s;
+}
+.nav-item-4 {
+  animation-delay: 4.2s;
+}
+.nav-item-5 {
+  animation-delay: 4.35s;
+}
+.nav-item-6 {
+  animation-delay: 4.4s;
+}
+
 .content {
   position: sticky;
-  bottom: -100vh ;
+  bottom: -100vh;
   z-index: 1;
   width: 100%;
   padding: 0;
@@ -274,6 +338,7 @@ p.skill-icon-caption {
   font-weight: bold;
   color: var(--verylight);
   text-decoration: none;
+  transition: .6s;
 }
 
 .project-link:hover {
@@ -386,10 +451,21 @@ p.skill-icon-caption {
   }
 }
 
-@keyframes slide-in {
+@keyframes left-slide {
   0% {
     opacity: 0;
     transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes right-slide {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
   }
   100% {
     opacity: 1;
