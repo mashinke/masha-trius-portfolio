@@ -201,6 +201,12 @@ body {
   padding: 10vh 0;
 }
 
+.content-section::before {
+  height: -200vh;
+  content: '';
+  display: none;
+}
+
 .content-heading, .content-subheading {
   text-align: center;
   font-family: var(--heading-font);
@@ -342,7 +348,7 @@ p.skill-icon-caption {
   justify-content: space-between;
 }
 
-.project-link {
+.project-link, .contact-method-link {
   padding: .5rem;
   border-radius: .25rem;
   background-color: var(--dark);
@@ -353,7 +359,7 @@ p.skill-icon-caption {
   transition: .6s;
 }
 
-.project-link:hover {
+.project-link:hover, .contact-method-link:hover {
   background-color: var(--verydark);
 }
 
@@ -386,6 +392,39 @@ p.skill-icon-caption {
 }
 
 #contact {
+}
+
+.contact-methods {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: space-evenly;
+  width: fit-content;
+}
+
+.contact-method-item {
+  margin: 0 0 2rem 0;
+  width: 100%;
+}
+
+.contact-method-link {
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin: auto 0;
+}
+
+.contact-method-icon {
+  margin: 0 1rem 0 0;
+}
+
+.contact-method-icon > i {
+  vertical-align: text-top;
+  font-size: 1.25rem;
 }
 
 @media screen and (min-width: 36rem) {
