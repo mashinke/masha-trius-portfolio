@@ -38,6 +38,7 @@ body {
 .masthead {
   height: calc(100vh - calc(100vh - 100%));
   background-image: url(assets/hero.jpg);
+  background-color: var(--dark);
 }
 .masthead, .masthead:before, .masthead:after {
   background-attachment: scroll;
@@ -74,44 +75,42 @@ body {
   top: calc(50vh - 7.5rem);
   background-color: var(--translucentdark);
   color: var(--verylight);
-  animation: left-slide .6s ease-out forwards;
-}
-.intro-container, .invite-container {
-  margin: 0;
-  animation: fade-in .3s ease-out forwards;
 }
 
-.intro, .invite {
+.message-container-animation {
+  animation: left-slide .6s ease-out forwards;
+}
+
+.invite-container {
+  margin: 0;
+}
+
+.invite {
   margin: 0;
   padding: 0;
   height: 4rem;
-  animation: fade-in .3s ease-out both;
   font-family: var(--heading-font);
   font-weight: bold;
   line-height: 2.5rem;
   font-size: 1.75rem;
 }
 
-.intro-1 {
+.invite-container-animation {
+  animation: fade-in .3s ease-out forwards;
+}
+
+.invite-animation {
+  animation: fade-in .3s ease-out both;
+}
+
+.invite-animation-1 {
   animation-delay: .6s;
 }
-.intro-2 {
+.invite-animation-2 {
+  animation-delay: .9s;
+}
+.invite-animation-3 {
   animation-delay: 1.2s;
-}
-.intro-3 {
-  animation-delay: 1.5s;
-}
-
-.invite-1 {
-  animation-delay: 2.4s;
-}
-
-.invite-2 {
-  animation-delay: 2.7s;
-}
-
-.invite-3 {
-  animation-delay: 3.0s;
 }
 
 .navigation {
@@ -119,7 +118,6 @@ body {
   bottom: 0;
   right: 0;
   z-index: 2;
-  animation: right-slide .6s ease-in 3.3s both;
   background: var(--translucentverydark);
   margin: 0;
   padding: .5rem 1rem .5rem;
@@ -133,7 +131,6 @@ body {
 }
 
 .nav-item {
-  animation: right-slide .3s ease-out both;
   color: var(--light);
   margin: .25rem .125rem .25rem auto;
   padding: .125rem .25rem .25rem .5rem;
@@ -158,21 +155,32 @@ body {
   text-decoration: underline;
 }
 
-.nav-item-2 {
-  animation-delay: 3.9s;
+.nav-animation {
+  animation: right-slide .6s ease-in 1.5s both;
 }
 
-.nav-item-3 {
-  animation-delay: 4.05s;
+.nav-item-animation {
+  animation: right-slide .3s ease-out both;
 }
-.nav-item-4 {
-  animation-delay: 4.2s;
+
+.nav-item-animation-1 {
+  animation-delay: 2.1s;
 }
-.nav-item-5 {
-  animation-delay: 4.35s;
+
+.nav-item-animation-2 {
+  animation-delay: 2.25s;
 }
-.nav-item-6 {
-  animation-delay: 4.4s;
+.nav-item-animation-3 {
+  animation-delay: 2.4s;
+}
+.nav-item-animation-4 {
+  animation-delay: 2.55s;
+}
+.nav-item-animation-5 {
+  animation-delay: 2.7s;
+}
+.nav-item-animation-6 {
+  animation-delay: 2.85s;
 }
 
 .content {
@@ -243,9 +251,13 @@ body {
   margin: 0 auto;
 }
 
+#skills .content-heading {
+  margin-bottom: 1rem;
+}
+
 .skill-icon {
   width: 5.5rem;
-  margin: 0 1rem;
+  margin: .5rem 1rem;
 }
 
 p.skill-icon-caption {
