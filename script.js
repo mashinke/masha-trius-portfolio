@@ -6,16 +6,22 @@ function setContentBottom(currentWindow) {
 }
 
 function scrollToSection (event) {
-  if (!event.target.matches('.js-nav-link')) return;
   event.preventDefault();
 
   const targetElement = document.getElementById(event.target.dataset.target);
-  document.scrollingElement.scroll(
-    0, 
-    targetElement.getBoundingClientRect().top + window.innerHeight
-    )
-
+  if(event.target.matches('.js-hero-nav-link')){ // other way doesn't work
+    document.scrollingElement.scroll(
+      0, 
+      targetElement.getBoundingClientRect().top + window.innerHeight
+      )
+  } else {
+    window.scrollBy(
+      0,
+      targetElement.getBoundingClientRect().top
+      )
+  }
 }
+
 
 function main() {
   setContentBottom(window);
@@ -24,7 +30,8 @@ function main() {
     setContentBottom(event.target);
   });
 
-  document.addEventListener('click', scrollToSection);
+  document.querySelectorAll('.js-nav-link')
+    .forEach(element => element.addEventListener('click', scrollToSection))
 }
 
 main();

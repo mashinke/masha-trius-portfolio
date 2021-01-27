@@ -28,6 +28,33 @@ body {
   height: 100%
 }
 
+.top-navigation {
+  width: 100%;
+  background: var(--medium);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: .5rem;
+}
+
+.top-navigation > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.top-nav-item {
+  font-size: .875rem;
+  margin: 0 .5rem 0 0;
+}
+
+.top-nav-item:last-child {
+  margin-right: 0;
+}
+
 .masthead-container {
   position: relative;
   height: 100%;
@@ -113,7 +140,7 @@ body {
   animation-delay: 1.2s;
 }
 
-.navigation {
+.hero-navigation {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -123,35 +150,35 @@ body {
   padding: .5rem 1rem .5rem;
 }
 
-.navigation ul {
+.hero-navigation ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   padding: 0;
 }
 
-.nav-item {
+.hero-nav-item {
   color: var(--light);
   margin: .25rem .125rem .25rem auto;
   padding: .125rem .25rem .25rem .5rem;
   text-align: right;
 }
 
-.nav-item:last-child {
+.hero-nav-item:last-child {
   margin-bottom: 0;
 }
 
-.nav-item:before {
+.hero-nav-item:before {
   content: '» ';
   color: var(--light);
 }
 
-.nav-item a {
+.hero-nav-item a {
   text-decoration: none;
 }
 
 
-.nav-item:hover {
+.hero-nav-item:hover {
   text-decoration: underline;
 }
 
@@ -159,27 +186,27 @@ body {
   animation: right-slide .6s ease-in 1.5s both;
 }
 
-.nav-item-animation {
+.hero-nav-item-animation {
   animation: right-slide .3s ease-out both;
 }
 
-.nav-item-animation-1 {
+.hero-nav-item-animation-1 {
   animation-delay: 2.1s;
 }
 
-.nav-item-animation-2 {
+.hero-nav-item-animation-2 {
   animation-delay: 2.25s;
 }
-.nav-item-animation-3 {
+.hero-nav-item-animation-3 {
   animation-delay: 2.4s;
 }
-.nav-item-animation-4 {
+.hero-nav-item-animation-4 {
   animation-delay: 2.55s;
 }
-.nav-item-animation-5 {
+.hero-nav-item-animation-5 {
   animation-delay: 2.7s;
 }
-.nav-item-animation-6 {
+.hero-nav-item-animation-6 {
   animation-delay: 2.85s;
 }
 
@@ -348,7 +375,7 @@ p.skill-icon-caption {
   justify-content: space-between;
 }
 
-.project-link, .contact-method-link {
+.project-link, .contact-method-link, .top-nav-item {
   padding: .5rem;
   border-radius: .25rem;
   background-color: var(--dark);
@@ -359,7 +386,7 @@ p.skill-icon-caption {
   transition: .6s;
 }
 
-.project-link:hover, .contact-method-link:hover {
+.project-link:hover, .contact-method-link:hover, .top-nav-item:hover {
   background-color: var(--verydark);
 }
 
