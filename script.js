@@ -1,8 +1,7 @@
 function setContentBottom(currentWindow) {
-  setTimeout(function () {
-    const content = document.getElementsByClassName('content')[0];
-    content.style.bottom = (window.innerHeight - content.offsetHeight) + 'px';
-}, 1000);
+  console.log('set bottom')
+  const content = document.getElementsByClassName('content')[0];
+  content.style.bottom = (window.innerHeight - content.offsetHeight) + 'px';
 }
 
 function scrollToSection (event) {
@@ -33,10 +32,11 @@ function toggleMenu () {
 
 
 function main() {
-  setContentBottom(window);
+  let resizeId = setTimeout(() => setContentBottom(window), 300);
 
-  window.addEventListener("orientationchange", function (event) {
-    setContentBottom(event.target);
+  window.addEventListener('resize', function (event) {
+    clearTimeout(resizeId);
+    resizeId = setTimeout(() => setContentBottom(event.target), 300);
   });
 
   document.querySelectorAll('.js-nav-link')
