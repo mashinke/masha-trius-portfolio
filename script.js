@@ -24,13 +24,26 @@ function scrollToSection (event) {
   }
 }
 
-function toggleMenu () {
-  const menu = document.querySelector('.top-navigation');
-  menu.classList.toggle('collapsed')
+function clickOutsideMenu (event) {
+  let menu = document.querySelector('.top-navigation');
+
+  if (
+    !window.matchMedia('(min-width: 64rem').matches
+    &&!menu.classList.contains('collapsed') 
+    && !menu.contains(event.target)){
+      console.log('collapsing')
+    event.preventDefault();
+    menu.classList.add('collapsed');
+  }
 }
 
+function toggleMenu () {
+  const menu = document.querySelector('.top-navigation');
+  menu.classList.toggle('collapsed');
+}
 
 function main() {
+
   let resizeId = setTimeout(() => setContentBottom(window), 300);
 
   window.addEventListener('resize', function (event) {
@@ -44,6 +57,10 @@ function main() {
     )
   document.querySelector('#menu-toggle')
     .addEventListener('click', toggleMenu)
+
+  document.addEventListener('click', (event) => 
+      clickOutsideMenu(event)
+  )
 }
 
 main();
