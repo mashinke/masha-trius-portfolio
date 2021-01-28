@@ -516,8 +516,20 @@ p.skill-icon-caption {
     display: none;
   }
 
-  .top-navigation {
+  .top-nav-list {
+    padding: .5rem;
     background: var(--medium);
+  }
+
+  .collapsed .top-nav-list {
+    transform: translateX(0);
+  }
+
+  .top-navigation {
+  }
+
+  .top-navigation.collapsed {
+    transform: translateY(0);
   }
 
   .top-nav-list {
