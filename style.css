@@ -29,30 +29,54 @@ body {
 }
 
 .top-navigation {
+  background: var(--verydark);
   width: 100%;
-  background: var(--medium);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
-  padding: .5rem;
+  transition: .3s;
+  display: flex;
+  align-items: flex-end;
 }
 
-.top-navigation > ul {
+.top-navigation.collapsed {
+  transform: translateY(calc(1.675rem - 100%));
+  transition: .3s .3s ease-in-out;
+
+}
+
+#menu-toggle {
+  height: 1.675rem;
+  background: var(--verydark);
+  color: var(--light);
+  padding: .25rem;
+  display: block;
+}
+
+#menu-toggle > i {
+  vertical-align: text-top;
+}
+
+.top-nav-list {
+  background: var(--dark);
+  width: 100%;
+  flex-direction: column;
   list-style: none;
   margin: 0;
-  padding: 0;
-  display: flex;
+  padding: 1rem 2rem;
   justify-content: space-evenly;
+  transform: translateX(0);
+  transition: .3s .3s ease-in-out;
+}
+
+.collapsed .top-nav-list {
+  transform: translateX(-100%);
+  transition: .3s ease-in-out;
 }
 
 .top-nav-item {
-  font-size: .875rem;
-  margin: 0 .5rem 0 0;
-}
-
-.top-nav-item:last-child {
-  margin-right: 0;
+  display: block;
 }
 
 .masthead-container {
@@ -457,7 +481,8 @@ p.skill-icon-caption {
 @media screen and (min-width: 36rem) {
   :root {
     font-size: 1.5rem;
-  }
+  }  
+
   .content-section > p, .content-section blockquote {
     line-height: 1.75;
   }
@@ -487,6 +512,28 @@ p.skill-icon-caption {
 }
 
 @media screen and (min-width: 64rem) {
+  #menu-toggle {
+    display: none;
+  }
+
+  .top-navigation {
+    background: var(--medium);
+  }
+
+  .top-nav-list {
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  .top-nav-item {
+    font-size: .875rem;
+    margin: 0 .5rem 0 0;
+  }
+
+  .top-nav-item:last-child {
+    margin-right: 0;
+}
+
   .project-header, .project-description {
     margin-bottom: 0;
   }

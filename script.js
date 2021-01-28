@@ -15,11 +15,20 @@ function scrollToSection (event) {
       targetElement.getBoundingClientRect().top + window.innerHeight
       )
   } else {
-    window.scrollBy(
-      0,
-      targetElement.getBoundingClientRect().top
-      )
+    const menu = document.querySelector('.top-navigation');
+    menu.classList.add('collapsed');
+    setTimeout(function () {
+      window.scrollBy(
+        0,
+        targetElement.getBoundingClientRect().top
+        );
+    }, 300)
   }
+}
+
+function toggleMenu () {
+  const menu = document.querySelector('.top-navigation');
+  menu.classList.toggle('collapsed')
 }
 
 
@@ -31,7 +40,11 @@ function main() {
   });
 
   document.querySelectorAll('.js-nav-link')
-    .forEach(element => element.addEventListener('click', scrollToSection))
+    .forEach(element => 
+      element.addEventListener('click', scrollToSection)
+    )
+  document.querySelector('#menu-toggle')
+    .addEventListener('click', toggleMenu)
 }
 
 main();
