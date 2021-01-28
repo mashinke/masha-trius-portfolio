@@ -1,5 +1,4 @@
 function setContentBottom(currentWindow) {
-  console.log('set bottom')
   const content = document.getElementsByClassName('content')[0];
   content.style.bottom = (window.innerHeight - content.offsetHeight) + 'px';
 }

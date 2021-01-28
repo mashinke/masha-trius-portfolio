@@ -280,13 +280,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: calc(8vh + 2rem) 0;
-}
-
-.content-section::before {
-  height: -200vh;
-  content: '';
-  display: none;
+  padding: calc(8vh + 1.675rem) 0 8vh;
 }
 
 .content-heading, .content-subheading {
@@ -322,10 +316,10 @@ body {
   width: 80%;
 }
 
-.photo {
-  margin: 9vh auto;
-  width: 20vh;
-  height: 25.6vh;
+#photo {
+  margin: 4vh auto;
+  width: 35.2vh;
+  height: 45vh;
   border: 1px solid var(--dark);
 }
 
@@ -335,7 +329,7 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-content: space-evenly;
-  max-width: 24rem;
+  max-width: 32rem;
   margin: 0 auto;
 }
 
@@ -563,18 +557,14 @@ p.skill-icon-caption {
     display: none;
   }
 
-  .top-nav-list {
-    flex-grow: 1;
-  }
-
   .top-nav-utilities {
     width: max-content;
   }
 
   #name {
-    width: auto;
+    width: min-content;
     line-height: 1.375rem;
-    margin-bottom: 0;
+    margin: 0 1rem 0 auto;
     color:var(--medium);
   }
 
@@ -587,8 +577,11 @@ p.skill-icon-caption {
   }
 
   .top-nav-list {
-    display: flex !important;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0 .5rem;
   }
 
   .top-nav-item {
@@ -598,6 +591,10 @@ p.skill-icon-caption {
 
   .top-nav-item:last-child {
     margin-right: 0;
+  }
+
+  .content-section {
+    padding-top: calc(8vh + 2.5rem);
   }
 
   .project-header, .project-description {
@@ -629,6 +626,7 @@ p.skill-icon-caption {
 
   .project-header {
     flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     height: 7rem;
   }
@@ -639,6 +637,12 @@ p.skill-icon-caption {
 
   .project-description {
     flex-grow: 2;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  #skills {
+    max-width: 48rem; 
   }
 }
 
