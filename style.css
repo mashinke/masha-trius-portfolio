@@ -258,6 +258,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  transition: bottom .5s;
 }
 
 .content-section {
@@ -265,7 +266,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 10vh 0;
+  padding: calc(8vh + 2rem) 0;
 }
 
 .content-section::before {

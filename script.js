@@ -2,7 +2,7 @@ function setContentBottom(currentWindow) {
   setTimeout(function () {
     const content = document.getElementsByClassName('content')[0];
     content.style.bottom = (window.innerHeight - content.offsetHeight) + 'px';
-  }, 200);
+}, 1000);
 }
 
 function scrollToSection (event) {
