@@ -52,8 +52,8 @@ function targetBlankExtLinks () {
 
 function main() {
   targetBlankExtLinks();
-
-  let resizeId = setTimeout(() => setContentBottom(window), 300);
+  let resizeId;
+  window.onload = () => setContentBottom(window);
 
   window.addEventListener('resize', function (event) {
     clearTimeout(resizeId);
