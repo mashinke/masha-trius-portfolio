@@ -5,6 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Masha Trius – Web Developer</title>
+  <script>
+    window.addEventListener('DOMContentLoaded', () =>
+      document.body.classList.add('js-loading'));
+    window.addEventListener('load', showPage);
+    function showPage() {
+      document.body.classList.remove('js-loading');
+    }
+  </script>
   <link
     href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     rel="stylesheet" type="text/css" />

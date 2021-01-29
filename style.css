@@ -21,6 +21,11 @@
   scroll-behavior: smooth;
 }
 
+.js-loading * {
+  display: none;
+  transition: none !important;
+}
+
 a {
   color: var(--verylight);
 }
