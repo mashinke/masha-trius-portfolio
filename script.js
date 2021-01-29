@@ -42,7 +42,16 @@ function toggleMenu () {
   menu.classList.toggle('collapsed');
 }
 
+function targetBlankExtLinks () {
+  let links = document.querySelectorAll('a')
+  links.forEach(link => {
+    link.hostname !== location.hostname 
+      && link.setAttribute('target', '_blank');
+  });
+}
+
 function main() {
+  targetBlankExtLinks();
 
   let resizeId = setTimeout(() => setContentBottom(window), 300);
 
