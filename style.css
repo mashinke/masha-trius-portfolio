@@ -285,7 +285,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: calc(8vh + 1.675rem) 0 8vh;
+  padding: calc(8vh + 0.8375rem) 0 8vh;
 }
 
 .content-heading, .content-subheading {
@@ -599,7 +599,7 @@ p.skill-icon-caption {
   }
 
   .content-section {
-    padding-top: calc(8vh + 2.5rem);
+    padding-top: calc(8vh + 1.25rem);
   }
 
   .project-header, .project-description {
