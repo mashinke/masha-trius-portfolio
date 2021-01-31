@@ -302,14 +302,14 @@ body {
   width: 80%;
 }
 
-#about {
+#about > .content-section:nth-child(even) {
   background-color: var(--medium);
 }
 
 .content-section p, .project-header, .project-screenshot, .project-description, .project-links {
   width: 80vw;
   max-width: 45rem;
-  margin: 0 auto;
+  margin: .5rem auto;
 }
 
 .content-section blockquote {
@@ -323,6 +323,11 @@ body {
   width: 35.2vh;
   height: 45vh;
   border: 1px solid var(--dark);
+}
+
+#photo > img {
+  height: 100%;
+  width: 100%;
 }
 
 #skills {
@@ -578,7 +583,7 @@ p.skill-icon-caption {
   .top-nav-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-grow: 1;
     margin: 0 .5rem;
   }
