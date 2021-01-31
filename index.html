@@ -24,13 +24,14 @@
 <body>
   <nav class="top-navigation collapsed">
     <div class="top-nav-list-container">
-      <div id="monogram">
-        <img src="assets/monogram.svg" alt="monogram">
-      </div>
+      <a class="js-nav-link" data-target="top" href="#top">
+        <div id="monogram"><img src="assets/monogram.svg" alt="monogram">
+        </div>
+      </a>
       <ul class="top-nav-list">
         <li>
           <a class="top-nav-item js-nav-link js-top-nav-link" href="#intro"
-            data-target="intro">about me
+            data-target="about">about me
           </a>
         </li>
         <li>
@@ -48,11 +49,14 @@
       </ul>
     </div>
     <div class="top-nav-utilities">
-      <div id="name">Masha Trius</div>
+      <div id="name">
+        <a class="js-nav-link" href="#top" data-target="top">Masha Trius</a>
+        <span>Masha Trius</span>
+      </div>
       <a id='menu-toggle'><i class="ri-menu-line"></i></a>
     </div>
   </nav>
-  <div class='masthead-container'>
+  <div class='masthead-container' id="top">
     <header class='masthead'>
       <div class="message-container message-container-animation">
         <h1 class="invite-container invite-container-animation">
@@ -71,7 +75,7 @@
           <li
             class="hero-nav-item hero-nav-item-animation hero-nav-item-animation-1">
             <a class="js-nav-link js-hero-nav-link" href="#intro"
-              data-target="intro">about me</a>
+              data-target="about">about me</a>
           </li>
           <li
             class="hero-nav-item hero-nav-item-animation hero-nav-item-animation-2">

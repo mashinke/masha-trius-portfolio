@@ -6,7 +6,10 @@ function setContentBottom(currentWindow) {
 function scrollToSection (event) {
   event.preventDefault();
 
-  const targetElement = document.getElementById(event.target.dataset.target);
+  const targetElementId = event.target.dataset.target 
+    || event.target.closest('a').dataset.target;
+
+  const targetElement = document.getElementById(targetElementId);
   if(event.target.matches('.js-hero-nav-link')){ // other way doesn't work
     document.scrollingElement.scroll(
       0, 
@@ -15,12 +18,16 @@ function scrollToSection (event) {
   } else {
     const menu = document.querySelector('.top-navigation');
     menu.classList.add('collapsed');
+    const delay = window.matchMedia('(min-width: 64rem)').matches
+      ? 0
+      : 300
+
     setTimeout(function () {
       window.scrollBy(
         0,
         targetElement.getBoundingClientRect().top
         );
-    }, 300)
+    }, delay)
   }
 }
 
