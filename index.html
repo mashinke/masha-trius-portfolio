@@ -12,7 +12,7 @@
 
     gtag('config', 'G-H4QF3YRQS9');
   </script>
-  
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Masha Trius – Web Developer</title>
@@ -39,11 +39,15 @@
     rel="stylesheet" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
     rel="stylesheet">
-  <link href="assets/style.css" rel="stylesheet" type="text/css" />
+  <link href="assets/common.css" rel="stylesheet" type="text/css" />
+  <link href="assets/screen.css" rel="stylesheet" type="text/css"
+    media="screen" />
+  <link href="assets/print.css" rel="stylesheet" type="text/css"
+    media="print" />
 </head>
 
 <body>
-  <nav class="top-navigation collapsed">
+  <nav class="top-navigation screen-only collapsed">
     <div class="top-nav-list-container">
       <a class="js-nav-link" data-target="top" href="#top">
         <div id="monogram"><img src="assets/monogram.svg" alt="monogram">
@@ -78,7 +82,7 @@
       <a id="menu-toggle"><i class="ri-menu-line"></i></a>
     </div>
   </nav>
-  <div class="masthead-container" id="top">
+  <div class="masthead-container screen-only" id="top">
     <header class="masthead">
       <div class="message-container message-container-animation">
         <h1 class="invite-container invite-container-animation">
@@ -119,6 +123,66 @@
     </header>
   </div>
   <main class="content">
+
+    <section class="content-section h-card" id="contact">
+      <div class="contact-info">
+        <h2 class="content-heading screen-only">Get in Touch</h2>
+        <div class="print-only contact-name p-name">Masha Trius</div>
+        <div class="print-only contact-title p-job-title">Web Developer</div>
+        <div class="print-only contact-location"><span
+            class="p-locality">Minneapolis</span>, <span
+            class="p-region">MN</span>
+        </div>
+      </div>
+      <ul class="contact-methods">
+        <li class="contact-method-item print-only">
+          <a class="contact-method-link u-url u-uid" href="https://masha.dev"
+            rel="me">
+            <div class="contact-method-icon">
+              <i class="ri-briefcase-fill"></i>
+            </div>
+            <div class="contact-method-url">https://masha.dev</div>
+          </a>
+        </li>
+        <li class="contact-method-item">
+          <a class="contact-method-link" href="mailto:triusmaria@gmail.com"
+            rel="me">
+            <div class="contact-method-icon">
+              <i class="ri-mail-send-fill"></i>
+            </div>
+            <div class="contact-method-caption screen-only">
+              email
+            </div>
+            <div class="contact-method-url">triusmaria@gmail.com</div>
+          </a>
+        </li>
+        <li class="contact-method-item">
+          <a class="contact-method-link u-url"
+            href="https://github.com/mashinke" rel="me">
+            <div class="contact-method-icon">
+              <i class="ri-github-fill"></i>
+            </div>
+            <div class="contact-method-caption screen-only">
+              github
+            </div>
+            <div class="contact-method-url">https://github.com/mashinke</div>
+          </a>
+        </li>
+        <li class="contact-method-item">
+          <a class="contact-method-link u-url"
+            href="https://www.linkedin.com/in/masha-trius/" rel="me">
+            <div class="contact-method-icon">
+              <i class="ri-linkedin-box-fill"></i>
+            </div>
+            <div class="contact-method-caption screen-only">
+              linkedin
+            </div>
+            <div class="contact-method-url">
+              https://www.linkedin.com/in/masha-trius</div>
+          </a>
+        </li>
+      </ul>
+    </section>
     <section id="about">
       <div class="content-section">
         <h2 class="content-heading">
@@ -158,55 +222,57 @@
       </div>
     </section>
     <section class="content-section" id="skills">
-      <h2 class="content-heading">My skills</h2>
-      <div class="skill-icon">
-        <img src="assets/html5-icon.svg" alt="html5">
-        <p class="skill-icon-caption">html5</p>
-      </div>
-      <div class="skill-icon">
-        <img src="assets/css3-icon.svg" alt="css3">
-        <p class="skill-icon-caption">css3</p>
-      </div>
-      <div class="skill-icon">
-        <img src="assets/js-icon.svg" alt="javascript">
-        <p class="skill-icon-caption">javascript</p>
-      </div>
-      <div class="skill-icon">
-        <img src="assets/python-icon.svg" alt="python">
-        <p class="skill-icon-caption">python</p>
-      </div>
-      <div class="skill-icon">
-        <img src="assets/node-icon.svg" alt="node.js">
-        <p class="skill-icon-caption">node.js</p>
-      </div>
-      <div class="skill-icon">
-        <img src="assets/react-icon.svg" alt="react.js">
-        <p class="skill-icon-caption">react.js</p>
-      </div>
-      <div class="skill-icon">
-        <img src="assets/express-icon.svg" alt="express.js">
-        <p class="skill-icon-caption">express.js</p>
-      </div>
-      <div class="skill-icon">
-        <img src="assets/jquery-icon.svg" alt="jquery">
-        <p class="skill-icon-caption">jquery</p>
-      </div>
-      <div class="skill-icon">
-        <img src="assets/postgres-icon.svg" alt="postgres">
-        <p class="skill-icon-caption">postgresql</p>
-      </div>
-      <div class="skill-icon">
-        <img src="assets/mocha-icon.svg" alt="mocha">
-        <p class="skill-icon-caption">mocha</p>
-      </div>
-      <div class="skill-icon">
-        <img src="assets/chai-icon.svg" alt="chai">
-        <p class="skill-icon-caption">chai</p>
-      </div>
-      <div class="skill-icon">
-        <img src="assets/heroku-icon.svg" alt="heroku">
-        <p class="skill-icon-caption">heroku</p>
-      </div>
+      <h2 class="content-heading">Skills</h2>
+      <ul class="skill-list">
+        <li class="skill-icon">
+          <img src="assets/html5-icon.svg" alt="html5">
+          <p class="skill-icon-caption">html5</p>
+        </li>
+        <li class="skill-icon">
+          <img src="assets/css3-icon.svg" alt="css3">
+          <p class="skill-icon-caption">css3</p>
+        </li>
+        <li class="skill-icon">
+          <img src="assets/js-icon.svg" alt="javascript">
+          <p class="skill-icon-caption">javascript</p>
+        </li>
+        <li class="skill-icon">
+          <img src="assets/python-icon.svg" alt="python">
+          <p class="skill-icon-caption">python</p>
+        </li>
+        <li class="skill-icon">
+          <img src="assets/node-icon.svg" alt="node.js">
+          <p class="skill-icon-caption">node.js</p>
+        </li>
+        <li class="skill-icon">
+          <img src="assets/react-icon.svg" alt="react.js">
+          <p class="skill-icon-caption">react.js</p>
+        </li>
+        <li class="skill-icon">
+          <img src="assets/express-icon.svg" alt="express.js">
+          <p class="skill-icon-caption">express.js</p>
+        </li>
+        <li class="skill-icon">
+          <img src="assets/jquery-icon.svg" alt="jquery">
+          <p class="skill-icon-caption">jquery</p>
+        </li>
+        <li class="skill-icon">
+          <img src="assets/postgres-icon.svg" alt="postgres">
+          <p class="skill-icon-caption">postgresql</p>
+        </li>
+        <li class="skill-icon">
+          <img src="assets/mocha-icon.svg" alt="mocha">
+          <p class="skill-icon-caption">mocha</p>
+        </li>
+        <li class="skill-icon">
+          <img src="assets/chai-icon.svg" alt="chai">
+          <p class="skill-icon-caption">chai</p>
+        </li>
+        <li class="skill-icon">
+          <img src="assets/heroku-icon.svg" alt="heroku">
+          <p class="skill-icon-caption">heroku</p>
+        </li>
+      </ul>
     </section>
     <section class="content-section" id="projects">
       <h2 class="content-heading">Projects</h2>
@@ -246,29 +312,38 @@
               </li>
             </ul>
           </header>
-          <div class="project-screenshot">
-            <img alt="screenshot of Jacob's Ladder"
-              src="assets/jacobs-ladder-screenshot.png">
+          <div class="project-body">
+            <div class="project-screenshot">
+              <img alt="screenshot of Jacob's Ladder"
+                src="assets/jacobs-ladder-screenshot.png">
+            </div>
+            <div class="project-description">
+              <p>
+                A game for Hebrew school students to learn the alphabet and
+                basic
+                vocabulary. Players correctly guess the names of letters and
+                meanings of words to advance across the game board. Inspired by
+                classic racing board games such as Chutes and Ladders and
+                Candyland.
+              </p>
+              <div class="project-links">
+                <a href="https://jacobs-ladder.vercel.app"
+                  class="project-link live">
+                  <i class="ri-computer-line"></i><span
+                    class="project-link-caption screen-only">live app</span>
+                  <span
+                    class="project-link-url print-only">https://jacobs-ladder.vercel.app</span>
+                </a>
+                <a href="https://github.com/mashinke/jacobs-ladder-client"
+                  class="project-link source">
+                  <i class="ri-github-fill"></i><span
+                    class="project-link-caption screen-only">code</span>
+                  <span
+                    class="project-link-url print-only">https://github.com/mashinke/jacobs-ladder-client</span>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="project-description">
-            <p>
-              A game for Hebrew school students to learn the alphabet and basic
-              vocabulary. Players correctly guess the names of letters and
-              meanings of words to advance across the game board. Inspired by
-              classic racing board games such as Chutes and Ladders and
-              Candyland.
-            </p>
-          </div>
-          <footer class="project-links">
-            <a href="https://jacobs-ladder.vercel.app"
-              class="project-link live">
-              <i class="ri-computer-line"></i>live app
-            </a>
-            <a href="https://github.com/mashinke/jacobs-ladder-client"
-              class="project-link source">
-              <i class="ri-github-fill"></i>code
-            </a>
-          </footer>
         </li>
         <li class="project-item">
           <header class="project-header">
@@ -303,28 +378,36 @@
               </li>
             </ul>
           </header>
-          <div class="project-screenshot">
-            <img alt="screenshot of Health Journal"
-              src="assets/health-journal-screenshot.png">
+          <div class="project-body">
+            <div class="project-screenshot">
+              <img alt="screenshot of Health Journal"
+                src="assets/health-journal-screenshot.png">
+            </div>
+            <div class="project-description">
+              <p>
+                A web-based app to keep track of health information. Users are
+                able to create their own custom entry forms using a variety of
+                data fields, and then use those forms to record and review
+                information about their activities and health condition.
+              </p>
+              <div class="project-links">
+                <a href="https://health-journal.vercel.app"
+                  class="project-link live">
+                  <i class="ri-computer-line"></i><span
+                    class="project-link-caption screen-only">live app</span>
+                  <span
+                    class="project-link-url print-only">https://health-journal.vercel.ap</span>
+                </a>
+                <a href="https://github.com/mashinke/health-journal-client"
+                  class="project-link source">
+                  <i class="ri-github-fill"></i><span
+                    class="project-link-caption screen-only">code</span>
+                  <span
+                    class="project-link-url print-only">https://github.com/mashinke/health-journal-client</span>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="project-description">
-            <p>
-              A web-based app to keep track of health information. Users are
-              able to create their own custom entry forms using a variety of
-              data fields, and then use those forms to record and review
-              information about their activities and health condition.
-            </p>
-          </div>
-          <footer class="project-links">
-            <a href="https://health-journal.vercel.app"
-              class="project-link live">
-              <i class="ri-computer-line"></i>live app
-            </a>
-            <a href="https://github.com/mashinke/health-journal-client"
-              class="project-link source">
-              <i class="ri-github-fill"></i>code
-            </a>
-          </footer>
         </li>
         <li class="project-item">
           <header class="project-header">
@@ -347,69 +430,40 @@
               </li>
             </ul>
           </header>
-          <div class="project-screenshot">
-            <img alt="screenshot of Liderbukh"
-              src="assets/liderbukh-screenshot.png">
+          <div class="project-body">
+            <div class="project-screenshot">
+              <img alt="screenshot of Liderbukh"
+                src="assets/liderbukh-screenshot.png">
+            </div>
+            <div class="project-description">
+              <p>
+                A site for enthusiasts of Yiddish music, containing
+                automatically
+                generated lead sheets. Lead sheets are available both as online
+                pages, and as professionally formatted, downloadable PDF files.
+              </p>
+              <p>
+                This app was created with the help of a grant by the Jewish
+                Federation of Minneapolis/St. Paul.
+              </p>
+              <div class="project-links">
+                <a href="https://liderbukh.jews.international"
+                  class="project-link live">
+                  <i class="ri-computer-line"></i><span
+                    class="project-link-caption screen-only">live app</span>
+                  <span
+                    class="project-link-url print-only">https://liderbukh.jews.international</span>
+                </a>
+                <a href="https://github.com/mashinke/liderbukh"
+                  class="project-link source">
+                  <i class="ri-github-fill"></i><span
+                    class="project-link-caption screen-only">code</span>
+                  <span
+                    class="project-link-url print-only">https://github.com/mashinke/liderbukh</span>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="project-description">
-            <p>
-              A site for enthusiasts of Yiddish music, containing automatically
-              generated lead sheets. Lead sheets are available both as online
-              pages, and as professionally formatted, downloadable PDF files.
-            </p>
-            <p>
-              This app was created with the help of a grant by the Jewish
-              Federation of Minneapolis/St. Paul.
-            </p>
-          </div>
-          <footer class="project-links">
-            <a href="https://liderbukh.jews.international"
-              class="project-link live">
-              <i class="ri-computer-line"></i>live app
-            </a>
-            <a href="https://github.com/mashinke/liderbukh"
-              class="project-link source">
-              <i class="ri-github-fill"></i>code
-            </a>
-          </footer>
-        </li>
-      </ul>
-    </section>
-    <section class="content-section" id="contact">
-      <h2 class="content-heading">Get in Touch</h2>
-      <ul class="contact-methods">
-        <li class="contact-method-item">
-          <a class="contact-method-link" href="mailto:triusmaria@gmail.com"
-            rel="me">
-            <div class="contact-method-icon">
-              <i class="ri-mail-send-fill"></i>
-            </div>
-            <div class="contact-method-caption">
-              email
-            </div>
-          </a>
-        </li>
-        <li class="contact-method-item">
-          <a class="contact-method-link u-url"
-            href="https://github.com/mashinke" rel="me">
-            <div class="contact-method-icon">
-              <i class="ri-github-fill"></i>
-            </div>
-            <div class="contact-method-caption">
-              github
-            </div>
-          </a>
-        </li>
-        <li class="contact-method-item">
-          <a class="contact-method-link u-url"
-            href="https://www.linkedin.com/in/masha-trius/" rel="me">
-            <div class="contact-method-icon">
-              <i class="ri-linkedin-box-fill"></i>
-            </div>
-            <div class="contact-method-caption">
-              linkedin
-            </div>
-          </a>
         </li>
       </ul>
     </section>

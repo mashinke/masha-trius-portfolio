@@ -1,24 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Proza+Libre:wght@400&family=Meie+Script\&display=swap');
-
-* {
-  box-sizing: border-box;
-}
 :root {
-  --verylight: #efefef;
-  --light: #d6d6d6;
-  --medium: #bbbbbb;
-  --dark: #656565;
-  --verydark: #000000;
-  --translucentdark: #000000d0;
-  --translucentverydark: #000000f0;
-  --heading-font: "Proza Libre";
-  --body-font: "Montserrat";
-  --signature-font: "Meie Script";
-  font-family: var(--body-font);
   background: var(--verylight);
   color: var(--verydark);
   height: 100%;
   scroll-behavior: smooth;
+}
+
+.print-only {
+  display: none;
 }
 
 .js-loading * {
@@ -289,14 +277,10 @@ body {
   padding: calc(8vh + 0.8375rem) 0 8vh;
 }
 
-.content-heading, .content-subheading {
+.content-subheading {
   text-align: center;
   font-family: var(--heading-font);
   margin: 0 auto;
-}
-
-.content-heading {
-  width: 90%;
 }
 
 .content-subheading {
@@ -334,55 +318,17 @@ body {
   width: 100%;
 }
 
-#skills {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-content: space-evenly;
-  max-width: 32rem;
-  margin: 0 auto;
-}
-
-#skills .content-heading {
-  margin-bottom: 1rem;
-}
-
-.skill-icon {
-  width: 5.5rem;
-  margin: .5rem 1rem;
-}
-
-p.skill-icon-caption {
-  width: 100%;
-  font-family: var(--heading-font);
-  font-size: 1rem;
-  text-align: center;
-  color: var(--dark);
-  cursor: default;
-}
-
 #projects {
   background-color: var(--medium);
   height: fit-content;
 }
 
-.project-list, .project-links, .project-technology-list {
-  list-style: none;
-  display: flex;
-  padding: 0;
-}
-
-.project-list {
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
-
 .project-item {
   padding: 10vh 0;
-  display: flex;
-  flex-direction: column;
+}
+
+.project-item:first-child {
+  padding-top: 0;
 }
 
 .project-item:nth-child(even) {
@@ -393,19 +339,8 @@ p.skill-icon-caption {
   padding-bottom: 0;
 }
 
-.project-header, .project-description {
-  margin-bottom: 1rem;
-}
-
 .project-header {
-  display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.project-title {
-  margin: 0 0 .5rem 0;
 }
 
 .project-screenshot {
@@ -414,10 +349,6 @@ p.skill-icon-caption {
   margin-top: 1rem;
   height: 45vw;
   max-height: 25.3125rem;
-}
-
-.project-screenshot img {
-  width: 100%
 }
 
 .project-description p {
@@ -460,14 +391,6 @@ p.skill-icon-caption {
   flex-wrap: wrap;
 }
 
-.project-technology-item {
-  font-size: .75rem;
-  margin: .125rem;
-  padding: .1875rem ;
-  border: 1px solid var(--light);
-  cursor: default;
-}
-
 .project-item:nth-child(even) .project-technology-item {
   border-color: var(--verylight);
 }
@@ -476,6 +399,10 @@ p.skill-icon-caption {
   background-color: var(--light);
   border-color: var(--light);
   transition: all .3s;
+}
+
+#contact {
+  order: 4;
 }
 
 .contact-methods {
@@ -509,6 +436,10 @@ p.skill-icon-caption {
 .contact-method-icon > i {
   vertical-align: text-top;
   font-size: 1.25rem;
+}
+
+.contact-method-url {
+  display: none;
 }
 
 @media screen and (min-width: 36rem) {

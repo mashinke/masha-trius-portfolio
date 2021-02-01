@@ -1,0 +1,137 @@
+.screen-only {
+  display: none;
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+p {
+  font-family: var(--print-font);
+}
+
+.content-section p {
+  margin: .75rem 0;
+}
+
+.content {
+  width: 45rem;
+  margin: 0 auto;
+}
+
+.content-heading {
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+#contact {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 0;
+  padding: .5rem;
+  border: 1px solid var(--medium);
+  border-radius: .5rem;
+  font-size: .75rem;
+}
+
+.contact-info {
+  margin: 0 auto 0 0;
+  padding: .5rem 1rem .5rem .5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info > div{
+  margin: 0 0 .25rem 0;
+}
+
+.contact-methods {
+  list-style: none;
+  padding: .5rem .5rem .5rem 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+
+.contact-method-item {
+  width: max-content;
+}
+
+.contact-method-link {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+}
+
+.contact-method-url {
+  margin: 0 0 0 1rem;
+}
+
+#about .content-heading {
+  width: max-content;
+}
+
+#about .content-section > p {
+  text-align: justify;
+}
+
+#photo {
+  float: right;
+  width: 15.5625rem;
+  margin: -1.675rem 0 1rem 2rem;
+}
+
+#photo > img {
+  border-radius: .5rem;
+  width: 100%;
+}
+
+#skills {
+  max-width: unset;
+  padding: 0;
+  margin: 2rem 0;
+  break-after: page;
+}
+
+#skills .content-heading {
+  margin: 0;
+}
+
+.skill-list {
+  max-width: unset;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.project-item {
+  margin: 2rem 0;
+}
+
+.project-body {
+  display: flex;
+}
+
+.project-screenshot img {
+  width: 20rem;
+}
+
+.project-description {
+  margin: 0 0 0 1rem;
+}
+
+.project-description p:first-child {
+  margin-top: 0;
+}
+
+.project-link-url {
+  font-size: .75rem;
+}
+
+.project-link i {
+  vertical-align: middle;
+}
