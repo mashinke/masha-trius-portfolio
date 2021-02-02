@@ -490,6 +490,7 @@ body {
     background: var(--medium);
     flex-grow: 1;
     flex-direction: row-reverse;
+    border-bottom: 1px inset var(--dark);
   }
 
   #monogram {
@@ -557,14 +558,14 @@ body {
   }
 
   .project-item {
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .project-title {
     flex-grow: 0;
   }
 
-  .project-item, .project-item:last-child {
+  .project-item, .project-item:last-child, .project-item:first-child  {
     padding: 2.5vh 0 5vh 0;
   }
 
@@ -584,13 +585,27 @@ body {
     height: 16.875vw;
   }
 
+  .project-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    flex-grow: 1;
+  }
+
+  .project-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
   .project-description {
     flex-grow: 2;
   }
 }
 
 @media screen and (min-width: 80rem) {
-  #skills {
+  #skill-list {
     max-width: 48rem; 
   }
 }
